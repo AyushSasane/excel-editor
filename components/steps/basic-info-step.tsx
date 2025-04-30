@@ -37,7 +37,7 @@ export function BasicInfoStep({
 
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="date">Date (Cell B3)</Label>
+          <Label htmlFor="date">Date</Label>
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -55,7 +55,7 @@ export function BasicInfoStep({
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="tankSerialNo">Tank Serial Number (Cell B4)</Label>
+          <Label htmlFor="tankSerialNo">Tank Serial Number</Label>
           <Input
             id="tankSerialNo"
             value={tankSerialNo}
@@ -66,7 +66,7 @@ export function BasicInfoStep({
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="themeColor">Theme Color (Cell F4)</Label>
+          <Label htmlFor="themeColor">Theme Color</Label>
           <Input
             id="themeColor"
             value={themeColor}

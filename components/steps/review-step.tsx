@@ -16,6 +16,14 @@ interface ReviewStepProps {
   loading: boolean
 }
 
+const observationLabels = [
+  "Blasting (Surface roughness SA 2 ½)",
+  "Primer (External Avg. DFT: 40 to 50 µ)",
+  "Primer (Internal Avg. DFT: 70 to 80 µ)",
+  "Painting (External Avg. DFT: 90 to 120 µ)",
+  "Painting (Internal Avg. DFT: 150 to 180 µ)"
+]
+
 export function ReviewStep({
   date,
   tankSerialNo,
@@ -61,10 +69,10 @@ export function ReviewStep({
           <AccordionTrigger>Observations</AccordionTrigger>
           <AccordionContent>
             <div className="space-y-2">
-              {observations.map((observation, index) => (
+              {observationLabels.map((label, index) => (
                 <div key={index} className="flex justify-between py-1 border-b">
-                  <span className="font-medium">Observation {index + 1}:</span>
-                  <span className="text-right max-w-[60%] truncate">{observation || "Not set"}</span>
+                  <span className="font-medium">{label}:</span>
+                  <span className="text-right max-w-[60%] truncate">{observations[index] || "Not set"}</span>
                 </div>
               ))}
             </div>
